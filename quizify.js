@@ -72,7 +72,7 @@ function playGame(userInput, correctAnswer) {
 function highScorer(leaderBoard) {
   leaderBoard.data.push({ name: userName, score: score });
   let sortedScoreList = leaderBoard.data.sort((a, b) => b.score - a.score);
-  console.log("\n 🙌🙌------- Leader Board Scores ------- 🙌🙌");
+  console.log(kuler("\n 🙌🙌------- Leader Board Scores ------- 🙌🙌" , "#38bdf8"));
   for (let leader of sortedScoreList) {
     console.log(`${leader.name} , Score : ${leader.score}`);
   }
@@ -104,6 +104,6 @@ function showQuestionsAndOptions(database) {
 
 showQuestionsAndOptions(database);
 
-console.log("\nYour Score is : ", score);
+console.log(kuler("\nYour Score is : ", "#ec4899"),score );
 
 highScorer(leaderBoard);
